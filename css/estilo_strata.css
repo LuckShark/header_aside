@@ -1,0 +1,345 @@
+body{
+    font-family: 'Open Sans', arial, helvetica sans-serif;
+    color: #666;
+    line-height: 1.7; /*esse é o espaçamento entre as letras*/
+
+}
+
+a{ 
+    transition: color .2s linear, border .2s; /*todo link vai ter uma transição agora*/
+    /*além disso, o pontilhado embaixo do link desaparece quando passar o mouse*/
+    text-decoration: none; /*agora nenhum link fica mais sublinhado*/
+    border-bottom: 1px dotted; /*no lugar do sublinhado, estou deixando essa opção pontilhada*/
+    color: #49bf9d;
+}
+
+a:hover{
+    border-bottom-color: transparent;
+}
+
+p{
+    margin: 0 0 2em;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #787878;
+    font-weight: normal; /*tirei o negrito*/
+    margin: 1em 0;/*nessa medida, a margem varia de acordo com o tamnaho da fonte*/
+    /*então o h1 vai ser maior que o h6*/
+}
+
+h1{
+    font-size: 36px;
+}
+.p-titulo {
+    font-size: 20px;
+    color: #ddd;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 26px;
+}
+h4{
+    font-size: 22px;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 15px;
+}
+
+sub, sup{
+    font-size: 12px;
+}
+
+blockquote{
+    border-left: 5px solid #efefef;
+    margin: 2em 0;
+    padding: .5em 0 .5em 1.5em;
+}
+
+code{
+    background-color: #f7f7f7;
+    border-radius: .35em;
+    border: 2px solid #efefef;
+    font-size: .9em;
+    padding: 0.25em 0.65em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #929292;
+}
+pre code{
+    display: block;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    padding-left: 1.1em;
+}
+
+li{
+    padding-left: 1em;
+}
+
+.ul-alternate{
+    list-style-type: none;
+    padding-left: 0;
+}
+.ul-alternate li{
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+.ul-alternate li:last-child{/*é uma pseudoclass para mudar apenas a última linha*/
+    border: 0;
+}
+
+i{
+    padding: 8px;
+    color: #49bf9d;
+}
+
+input, label, textarea, select{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box; /*tira a barra de rolagem*/
+}
+input, textarea, select{
+    background-color: #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    margin-bottom: 15px;
+}
+input[type="radio"], input[type="checkbox"]{ 
+    width: auto;
+}
+input:focus, textarea:focus{
+    border: 3px solid #49bf9d;
+    outline: none;
+}
+textarea{
+    height: 10em;
+}
+
+.button-default{
+    background-color: #49bf9d;
+    border: 3px solid #49bf9d;
+    color: white;
+    padding: .75em 1.5em;
+    border-radius: 5px;
+    font-size: .8em;
+    display: inline-block;
+    width: auto;
+    transition: all .5s;
+    cursor: pointer;
+}
+.button-default:hover{
+    background-color: #99d8c6;
+    border-color: transparent;
+    color: rgb(87, 30, 87);
+}
+
+.button-default-stroke{
+    background-color: white;
+    border-color: #efefef;
+    color: inherit; /*herdou do elemento pai*/
+}
+.button-default-stroke:hover{
+    color: #49bf9d;
+    border-color: #49bf9d;
+    background-color: white;
+}
+
+
+.button-default-small{
+    font-size: .65em;
+}
+.button-default-big{
+    font-size: 1em;
+}
+
+.button-default-full{
+    display: block;
+    text-align: center;
+}
+
+.imagem-link{
+    border: 0;
+}
+
+.table{
+    width: 100%;
+    margin: 0 0 2em 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+.table td{
+    padding: 0.75em;
+}
+.table th{
+    background: #ccc;
+    padding: 0.75em;
+}
+.table tbody tr td{
+    border-bottom: 1px solid #ccc;
+}
+.table tbody tr:first-child td{ /*peguei a tbody, a primeira tr e as tds que estão lá dentro*/
+    border-top: 2px solid #666;
+}
+.table tbody tr:last-child td{ /*agora para baixo*/
+    border-bottom: 2px solid #666;
+}
+.table tbody tr:nth-child(even) td{ /*ODD pega números impares - EVEN numeros pares*/
+    background: #eee;
+}
+
+.table-alternate tbody td, .table-alternate tbody tr:first-child td, .table-alternate tbody tr:last-child td {
+    border: 1px solid #ddd;
+}
+
+
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35%; /*esse header ocupará 35% da página*/
+    padding: 124px 54px 72px; 
+    box-sizing: border-box;
+    background-image: url(../imagens/overlay.png), url(../imagens/bg.jpg);
+    background-position: center top; /**isso é aplicado nas duas imagens */
+    background-size: auto, cover; /*o cover faz a imagem se mostrar toda*/
+    text-align: right;
+}
+
+
+.main-header-title{
+    font-size: 22px;
+    line-height: 1.5;
+    color: white;
+    font-weight: normal; /*por que antes estava em negrito*/
+    color: rgba(255, 255, 255, .5);
+    
+}
+
+.main-header-title strong{
+    color: white;
+    font-weight: normal;
+}
+
+.main-header-link{
+    color: inherit; /*com esse atributo, ele vai herdar a cor do elemento pai*/
+    /*elemento pai é o main-header-title*/
+    /*é útil pra quando precisa fazer  manutenção nos dois*/
+}
+
+.main-header-link:hover{
+    color: #49bf9d;
+}
+
+/*Entao o resto, o content, ocupará 65%*/
+.main-content{
+    width: 65%;
+    margin-left: 35%; /* estou distanciando ele dos 35% do header*/
+    padding: 124px 54px 72px; 
+    box-sizing: border-box;
+    /*quando eu adiciono o padding, a página fica + de 100%, ou seja, fica com scroll esquerda-direita*/
+    /*para corrigir isso, uso o Border-Box*/
+}
+
+.main-header-link img{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recent-works-card img{
+    border-radius: 10px;
+}
+
+.gallery-img img{
+    width: 100%;
+    
+    
+}
+.gallery-thumb img, .gallery-img img{
+    margin-bottom: 2%;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.main-footer{
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    left: 0;
+    padding: 0 54px 32px 0; 
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 16px;
+    transition: all .5s;
+    cursor: pointer;
+}
+.fa-linkedin:hover{
+    color: rgb(48, 144, 207);
+    border-radius: 10%;
+}
+.fa-github:hover{
+    color: rgba(255, 255, 255, 0.61);
+    border-radius: 10%;
+}
+.fa-instagram:hover{
+    color: rgb(202, 58, 202);
+    border-radius: 10%;
+}
+
+
+/* Grid */ /*-- existem formas mais simples de fazer a GRID*/
+.row{
+    overflow: auto;
+}
+.col-2{
+    width: 48.5%;
+    float: left;
+}
+.col-2:first-child{
+    margin-right: 1.5%;
+}
+.col-2:last-child{
+    margin-left: 1.5%;
+}
+.col-2-3{
+    width: 66%;
+    float: left;
+}
+.col-1-3{
+    width: 32%;
+    float: left;
+}
+
+/*
+.col-1-3:nth-child(1), .col-1-3:nth-child(4), .col-1-3:nth-child(7){
+    margin: 0 2%;
+} muito ruim usar essa fórmula
+*/
+
+.col-1-3:nth-child(3n - 2){ /*pega todo multiplo de 3 menos 2 = pegar o 1, o 4, e o 7*/
+    margin-right: 2%;
+}
+.col-1-3:nth-child(3n){ /* essa pega o 3, o 6 e 9*/
+    margin-left: 2%;
+}
+
+.col-2-3 + .col-1-3{ /*isso seleciona o col-1-3 que vem imediatamente após o col-2-3*/
+    margin-left: 2%;
+}
+
+.col-1-3 + .col-2-3{
+    margin-left: 2%;
+}
